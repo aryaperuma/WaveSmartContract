@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../components/head'); %>
+  </head>
+  <body class="container">
+    <header><%- include('../components/header'); %></header>
+    <main>
+      <div class="jumbotron">
+        <div class="loader"></div>
+        <form
+          style="
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+          "
+        >
+          <input
+            id="wave-message"
+            type="text"
+            required="true"
+            style="
+              padding: 10px;
+              font-size: 16px;
+              border-radius: 5px;
+              border: none;
+              box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+              margin-bottom: 20px;
+              width: 300px;
+              max-width: 100%;
+            "
+            placeholder="Enter your Wave Message"
+          />
+          <input
+            type="button"
+            id="wave-btn"
+            style="
+              padding: 10px 20px;
+              background-color: #4caf50;
+              color: white;
+              border-radius: 5px;
+              border: none;
+              font-size: 16px;
+              cursor: pointer;
+            "
+            value="Wave 👋🏼"
+          />
+          <input
+            id="total-wave-btn"
+            type="button"
+            style="
+              display: block;
+              margin-top: 10px;
+              padding: 10px 20px;
+              background-color: #3cbbe2;
+              color: white;
+              border-radius: 5px;
+              border: none;
+              font-size: 16px;
+              cursor: pointer;
+            "
+            value="Total Waves"
+          />
+        </form>
+      </div>
+    </main>
+    <div id="total-count-section" style="display: block"></div>
+
+    <div
+      id="wrapper"
+      style="display: flex; justify-content: center; flex-wrap: wrap"
+    ></div>
+
+    <script src="js/web3.js"></script>
+  </body>
+</html>
